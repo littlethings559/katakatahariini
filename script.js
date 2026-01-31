@@ -7,7 +7,7 @@ let i = 0;
 function typeWriter() {
   if (i < text.length) {
     const span = document.createElement("span");
-    span.textContent = text[i];
+    span.textContent = text[i] === " " ? "\u00A0" : text[i];
     span.classList.add("letter");
     quoteEl.appendChild(span);
     i++;
