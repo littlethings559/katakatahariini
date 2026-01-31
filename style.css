@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+body.shake {
+  animation: shakeScreen 0.4s infinite;
+}
+
+@keyframes shakeScreen {
+  0% { transform: translate(2px, 2px); }
+  25% { transform: translate(-2px, -3px); }
+  50% { transform: translate(-3px, 2px); }
+  75% { transform: translate(2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+.quote {
+  font-size: 2em;
+  max-width: 900px;
+  line-height: 1.6;
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.explode .letter {
+  opacity: 0;
+  transform: translate(var(--x), var(--y)) rotate(var(--r));
+}
+
+#myImage {
+  max-width: 300px;
+  margin-top: 30px;
+}
