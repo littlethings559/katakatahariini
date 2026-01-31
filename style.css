@@ -76,3 +76,7 @@ body.shake {
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
+.letter {
+  display: inline-block; /* bikin tiap kata bisa wrap */
+  transition: transform 1s ease, opacity 1s ease;
+}
